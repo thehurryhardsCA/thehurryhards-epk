@@ -26,7 +26,7 @@ body {
     padding-bottom: 30px;
 }
 
-/* SAFE OVERLAY (does NOT block clicks) */
+/* SAFE OVERLAY */
 .hero-overlay {
     position:absolute;
     bottom:0;
@@ -37,13 +37,14 @@ body {
     pointer-events: none;
 }
 
-/* BUTTON */
+/* CTA BUTTON */
 .cta {
     position: relative;
     z-index: 20;
+    text-align:center;
 }
 
-.cta a {
+.cta a.button {
     display:inline-block;
     background:#fff;
     color:#000;
@@ -55,9 +56,22 @@ body {
     transition: all 0.3s ease;
 }
 
-.cta a:hover {
+.cta a.button:hover {
     transform: scale(1.08);
     box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* EMAIL FALLBACK */
+.cta .email {
+    margin-top:10px;
+    font-size:14px;
+    color:#ddd;
+}
+
+.cta .email a {
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,0.4);
 }
 
 /* SECTIONS */
@@ -101,6 +115,11 @@ h2 {
     margin-right:15px;
     color:#ff4d4d;
     text-decoration:none;
+    transition:0.3s;
+}
+
+.socials a:hover {
+    color:#fff;
 }
 
 /* FOOTER */
@@ -124,9 +143,17 @@ footer {
     <div class="hero-overlay"></div>
 
     <div class="cta">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thehurryhardsbooking@gmail.com&su=Booking%20Inquiry%20-%20The%20Hurry%20Hards" target="_blank">
+        <a class="button" href="mailto:thehurryhardsbooking@gmail.com">
             BOOK NOW
         </a>
+
+        <div class="email">
+            or email us directly:
+            <br>
+            <a href="mailto:thehurryhardsbooking@gmail.com">
+                thehurryhardsbooking@gmail.com
+            </a>
+        </div>
     </div>
 </header>
 
@@ -187,10 +214,6 @@ Private Parties
 <a href="https://www.instagram.com/thehurryhards/">Instagram</a>
 <a href="https://www.youtube.com/@thehurryhards">YouTube</a>
 </div>
-
-<p style="margin-top:15px;">
-Or email us directly: <b>thehurryhardsbooking@gmail.com</b>
-</p>
 </section>
 
 <footer>
