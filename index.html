@@ -4,11 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Hurry Hards | EPK</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
-body {margin:0;font-family:'Montserrat',sans-serif;background:#0d0d0d;color:#fff;}
+body {
+    margin:0;
+    font-family:'Montserrat',sans-serif;
+    background:#0d0d0d;
+    color:#fff;
+}
 
+/* HEADER */
 header {
     position:relative;
     background: url('https://i.imgur.com/uxTTYNg.jpg') center/cover no-repeat;
@@ -19,7 +26,9 @@ header {
     padding-bottom: 30px;
 }
 
+/* OVERLAY FIXED */
 header::after {
+    pointer-events: none;
     content:"";
     position:absolute;
     bottom:0;
@@ -29,8 +38,10 @@ header::after {
     background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
 }
 
+/* BUTTON */
 .cta a {
-    position:relative;
+    position: relative;
+    z-index: 10;
     background:#fff;
     color:#000;
     padding:14px 28px;
@@ -38,25 +49,65 @@ header::after {
     border-radius:6px;
     font-weight:bold;
     font-size:18px;
+    transition: all 0.3s ease;
 }
 
-section {max-width:1100px;margin:auto;padding:60px 20px;}
+.cta a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
 
+/* SECTIONS */
+section {
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* VIDEO */
 video {
     width:100%;
     border-radius:10px;
 }
 
-.grid {display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
 
-.card {background:#1a1a1a;padding:25px;border-radius:12px;}
+.card {
+    background:#1a1a1a;
+    padding:25px;
+    border-radius:12px;
+    transition: 0.3s;
+}
 
-h2 {font-family:'Oswald',sans-serif;}
+.card:hover {
+    transform: translateY(-8px);
+}
 
-.socials a {margin-right:15px;color:#ff4d4d;text-decoration:none;}
+/* HEADINGS */
+h2 {
+    font-family:'Oswald',sans-serif;
+}
 
-footer {text-align:center;padding:30px;color:#aaa;}
+/* SOCIAL */
+.socials a {
+    margin-right:15px;
+    color:#ff4d4d;
+    text-decoration:none;
+}
 
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+}
+
+/* MOBILE */
 @media(max-width:800px){
 .grid{grid-template-columns:1fr;}
 header{height:250px;}
@@ -68,8 +119,7 @@ header{height:250px;}
 
 <header>
 <div class="cta">
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=thehurryhardsbooking@gmail.com&su=Booking%20Inquiry%20-%20The%20Hurry%20Hards&body=Hi%20The%20Hurry%20Hards,%0D%0A%0D%0AI%27m%20interested%20in%20booking%20you%20for%20an%20event.%0D%0A%0D%0ADetails:%0D%0A- Date:%0D%0A- Location:%0D%0A- Event:%0D%0A%0D%0AThanks!"
-target="_blank">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=thehurryhardsbooking@gmail.com&su=Booking%20Inquiry%20-%20The%20Hurry%20Hards" target="_blank">
 BOOK NOW
 </a>
 </div>
@@ -79,14 +129,17 @@ BOOK NOW
 <h2>Live Performance</h2>
 <video controls>
   <source src="https://i.imgur.com/RXPj0T4.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 </section>
 
 <section class="grid">
 <div class="card">
 <h2>About The Band</h2>
-<p>The Hurry Hards are a high-energy ska punk party band from Regina, Saskatchewan. Featuring a full horn section and a setlist of iconic Canadian hits, they deliver an unforgettable live show packed with energy, nostalgia, and crowd interaction.</p>
+<p>
+The Hurry Hards are a high-energy ska punk party band from Regina, Saskatchewan. 
+Featuring a full horn section and a setlist of iconic Canadian hits, they deliver 
+an unforgettable live show packed with energy, nostalgia, and crowd interaction.
+</p>
 </div>
 
 <div class="card">
@@ -129,6 +182,10 @@ Private Parties
 <a href="https://www.instagram.com/thehurryhards/">Instagram</a>
 <a href="https://www.youtube.com/@thehurryhards">YouTube</a>
 </div>
+
+<p style="margin-top:15px;">
+Or email us directly: <b>thehurryhardsbooking@gmail.com</b>
+</p>
 </section>
 
 <footer>
